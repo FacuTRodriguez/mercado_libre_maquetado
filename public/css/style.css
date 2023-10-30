@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&family=Roboto&family=Work+Sans:wght@300;400&display=swap');
+ :root{
+  --tipografia:'Roboto', sans-serif;
+  --colorHearder: #EAC926;
+  --colorCeleste: #1259c3;
+  --cuerpoTexto: 12px;
+  --tamañoTiturales: 24px;
+  --tamañoPrecios: 18px;
+  --descuentoDescripcion: 16px
+
+ }
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+
+body.home{ 
+  font-family:var(--tipografia); 
+  font-size: var(--cuerpoTexto);
+  background-color: #ebebeb;
+}
+
+
+.home__main__section{
+  margin: 10px 12px;
+  background-color: #fff;
+}
+
+.home__main__header{
+  background-color:var(--colorHearder);
+  padding-bottom: 20px;
+
+}
+
+.home__main__header img{
+  width: 150px;
+  margin: 20px;
+ 
+}
+.home__main__header input{
+margin-left: 20px;
+
+}
+.icon-search{
+  background-color: #fff;
+  border: 1px solid  #666;
+  border-radius: 2px;
+  padding: 2px 1px;
+  
+}
+.home__main__header p{
+  margin: 10px 40px;
+}
+.home__main__header nav{
+  margin-top: 15px;
+  display: none;
+
+}
+.home__main__header nav li a{
+  color: #000;
+  text-decoration: none; 
+}
+
+.burger-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  
+} 
+.burger-menu i{
+  color: #fff;
+  border: 1px solid var(--colorCeleste);
+  padding: 20px 10px;
+  background-color: var(--colorCeleste);
+  border-radius: 5px;
+
+}
+
+.home__main__section{
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+article img {
+  width: 100%;
+}
+.home__main__section h3{
+  font-size: var(--tamañoTiturales);
+}
+.home__main__section p{
+  font-size:var(--tamañoPrecios);
+}
+
+.home__main__section span, .home__main__section h4{
+  font-size: var(--descuentoDescripcion);
+}
+.home__footer{
+  margin: 5px;
+  color: #666;
+}
+.home__footer__section{
+  text-align: center;
+  background-color: #fff; 
+  padding: 30px;
+}
+.home__footer__section h4{
+  font-size: var(--descuentoDescripcion);
+}
+
+.home__footer__section i{
+  font-size: 2rem;
+  color:  var(--colorCeleste);
+  margin-bottom: 10px;
+}
+
+
