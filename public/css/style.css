@@ -3,6 +3,7 @@
   --tipografia:'Roboto', sans-serif;
   --colorHearder: #EAC926;
   --colorCeleste: #1259c3;
+  --colorVerde: #39b54a;
   --cuerpoTexto: 12px;
   --tamañoTiturales: 24px;
   --tamañoPrecios: 18px;
@@ -17,7 +18,7 @@
   box-sizing: border-box;
  }
 
-
+/* Mobile */
 body.home{ 
   font-family:var(--tipografia); 
   font-size: var(--cuerpoTexto);
@@ -27,7 +28,7 @@ body.home{
 
 .home__main__section{
   margin: 10px 12px;
-  background-color: #fff;
+ 
 }
 
 .home__main__header{
@@ -53,7 +54,8 @@ margin-left: 20px;
   
 }
 .home__main__header p{
-  margin: 10px 40px;
+  margin-top: 20px;
+  text-align: center;
 }
 .home__main__header nav{
   margin-top: 15px;
@@ -83,7 +85,7 @@ margin-left: 20px;
 }
 
 .home__main__section{
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
   color: #666;
 }
@@ -93,12 +95,33 @@ article img {
 .home__main__section h3{
   font-size: var(--tamañoTiturales);
 }
-.home__main__section p{
+.home__main__section__article{
+  background-color: #fff;
+  margin: 10px;
+  
+}
+.home__main__section__article--detalles{
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  
+}
+.home__main__section__article--detalles i{
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--colorVerde);
+  border-radius: 50%;
+  color: var(--colorVerde);
+}
+.home__main__section__article--detalles p{
   font-size:var(--tamañoPrecios);
 }
 
-.home__main__section span, .home__main__section h4{
+.home__main__section__article--detalles span{
   font-size: var(--descuentoDescripcion);
+  color: var(--colorVerde);
+}
+.home__main__section__article--detalles h4{
+  display: none;
 }
 .home__footer{
   margin: 5px;
@@ -120,3 +143,28 @@ article img {
 }
 
 
+/* Tablet - Desktop */
+
+@media(min-width: 728px){
+.home__main__header nav{
+  display: block;
+  margin-left: 10px;
+}
+
+
+.burger-menu{
+  display: none;
+}
+.home__main__section__article{
+ box-shadow:  0px 0px 10px rgb(100, 100, 100);
+}
+.home__main__section--detalles{
+  border-top: 1px solid #ebebeb;
+  margin: 15px;
+}
+.home__main__section__article--detalles h4{
+  display: block;
+  font-size: var(--descuentoDescripcion);
+}
+
+}
