@@ -26,7 +26,8 @@ body.home{
 }
 
 
-.home__main__section{
+
+.home__main__section,  .home__main__section--ofertas{
   margin: 10px 12px;
  
 }
@@ -38,21 +39,42 @@ body.home{
 }
 
 .home__main__header img{
-  width: 150px;
-  margin: 20px;
+  width: 49%;
+  margin: 20px 5px;
  
 }
-.home__main__header input{
-margin-left: 20px;
-
+.home__main__header--search{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
 }
-.icon-search{
-  background-color: #fff;
-  border: 1px solid  #666;
-  border-radius: 2px;
-  padding: 2px 1px;
+
+.home__main__input{
+  
+  width: 47%;
+  padding: 10px;
+  padding-right: 35px;
+  border-radius: 5px;
+  border: 0;
   
 }
+.home__main__header--search button{
+  background-color: #FFF;
+  width: 31px;
+  height: 31px;
+  padding: 10px;
+  position: absolute;
+  border: 0;
+  top: 0;
+  bottom: 36px;
+  right: 5px;
+  margin: auto;
+}
+
+
 .home__main__header p{
   margin-top: 20px;
   text-align: center;
@@ -83,8 +105,12 @@ margin-left: 20px;
   border-radius: 5px;
 
 }
+.home__main--banner img{
+  width: 100%;
+ 
+}
 
-.home__main__section{
+.home__main__section, .home__main__section--ofertas{
   padding: 20px 0;
   text-align: center;
   color: #666;
@@ -92,33 +118,42 @@ margin-left: 20px;
 article img {
   width: 100%;
 }
-.home__main__section h3{
+.section--title{
   font-size: var(--tamañoTiturales);
-}
-.home__main__section__article{
-  background-color: #fff;
-  margin: 10px;
   
 }
+
+
 .home__main__section__article--detalles{
+  width: 100%;
   border-top: 1px solid #ebebeb;
   padding: 15px;
   
 }
+
 .home__main__section__article--detalles i{
-  padding: 10px;
-  font-size: 1rem;
+  display: block;
+  font-size: 16px;
+  background-color: #fff;
   border: 1px solid var(--colorVerde);
   border-radius: 50%;
   color: var(--colorVerde);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  
+  
 }
+
 .home__main__section__article--detalles p{
   font-size:var(--tamañoPrecios);
+
 }
 
 .home__main__section__article--detalles span{
   font-size: var(--descuentoDescripcion);
   color: var(--colorVerde);
+  
 }
 .home__main__section__article--detalles h4{
   display: none;
@@ -143,28 +178,144 @@ article img {
 }
 
 
-/* Tablet - Desktop */
+/* Tablet */
 
-@media(min-width: 728px){
+@media(min-width: 761px) {
+
 .home__main__header nav{
   display: block;
   margin-left: 10px;
+}
+.home__main__header img{
+  width: 200px;
+  margin: 20px 18px;
+  
+}
+.home__main__header p{
+  margin: 20px;
+}
+.home__main__header--search{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+}
+.home__main__input{
+  width: 250px;
+  
+}
+.home__main__header--search button{
+  top: 34px;
+  bottom: 36px;
+  left: 165px; 
+}
+.home__main__header__nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+.home__main__header__nav  li {
+  padding:  0 10px;
+  display: inline-block;
+  list-style: none;
 }
 
 
 .burger-menu{
   display: none;
 }
-.home__main__section__article{
- box-shadow:  0px 0px 10px rgb(100, 100, 100);
+.home__main__section__article, .home__main__section--ofertas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
 }
-.home__main__section--detalles{
+
+.home__main__section--ofertas article, .home__main__section__article article{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: 18px ;
+  border-right: 1px solid #ebebeb;
+  box-shadow:  0px 0px 10px rgb(100, 100, 100);
+
+
+}
+
+
+.home__main__section__article img {
+  width: 100%;
+}
+
+.home__main__section--detalles {
   border-top: 1px solid #ebebeb;
   margin: 15px;
 }
-.home__main__section__article--detalles h4{
+
+
+
+
+.home__main__section__article--detalles h4 {
   display: block;
   font-size: var(--descuentoDescripcion);
 }
 
+.home__footer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 5px;
+  color: #666;
+
 }
+.home__footer__section{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+}
+
+
+
+ /* Desktop */
+
+@media(min-width: 1024px) {
+  .home__main__header img{
+    width: 280px;
+    margin: 20px 30px;  
+  }
+  .home__main__input{
+    margin: 20px 40px;
+  }
+  
+  .home__main__header--search button{
+    top: 34px;
+    bottom: 36px;
+    left: 200px; 
+  }
+
+
+  .home__main__section__article, .home__main__section--ofertas {
+    margin: 10px;
+    display: flex;
+    
+    
+  }
+
+  .home__main__section__article article {
+    width: 23%;
+    margin: 0 8px;
+}
+}
+
+
+
+
+
+
+
+
